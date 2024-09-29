@@ -1,4 +1,31 @@
 # Client Task A #
 # Add your pseudocode to this file below this line: #
 # ------------------------------------------------- #
+BEGIN
+   GENERATE random_number between 1 and 10
+   SET number_of_attempts = 0
+   SET maximum_attempts = 3
+   guessed = False
+
+   PRINT "Guess the number (between 1 and 10). You have 3 chances."
+
+   WHILE number_of_attempts < maximum_attempts AND guessed = False DO
+      INCREMENT number_of_attempts by 1
+      PRINT "Attempt", number_of_attempts, ": Enter your guess"
+      READ player_guess
+
+      IF player_guess = random_number THEN
+         PRINT "Congratulations! You guessed the correct number."
+         guessed = True
+      ELSE IF player_guess < random_number THEN
+         PRINT "Too low! Try again."
+      ELSE
+         PRINT "Too high! Try again."
+      ENDIF
+   ENDWHILE
+
+   IF guessed = False THEN
+      PRINT "Sorry! You've used all your chances. The correct number was", random_number
+   ENDIF
+END
 

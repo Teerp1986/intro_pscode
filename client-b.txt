@@ -1,4 +1,40 @@
 # Client Task B #
 # Add your pseudocode to this file below this line: #
 # ------------------------------------------------- #
+BEGIN
+   SET current_position = (0, 0)   // Assume (0, 0) is the starting position
+   SET target_position = (4, 6)    // Set the specific target location in the Twinkies Warehouse
+   SET direction = ""
+   
+   PRINT "Welcome to the Twinkies Warehouse Navigator!"
+   PRINT "You are currently at position", current_position
+   PRINT "Your goal is to reach position", target_position
+   PRINT "You can move: North, South, East, or West."
+
+   WHILE current_position != target_position DO
+      PRINT "Enter direction to move (North, South, East, or West):"
+      READ direction
+
+      IF direction = "North" THEN
+         current_position.y = current_position.y + 1
+      ELSE IF direction = "South" THEN
+         current_position.y = current_position.y - 1
+      ELSE IF direction = "East" THEN
+         current_position.x = current_position.x + 1
+      ELSE IF direction = "West" THEN
+         current_position.x = current_position.x - 1
+      ELSE
+         PRINT "Invalid direction. Please enter North, South, East, or West."
+      ENDIF
+
+      PRINT "You are now at position", current_position
+
+      IF current_position = target_position THEN
+         PRINT "Congratulations! You've found the location at", target_position
+      ELSE
+         PRINT "Keep moving to find the target."
+      ENDIF
+   ENDWHILE
+
+END
 

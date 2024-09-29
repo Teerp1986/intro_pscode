@@ -2,3 +2,18 @@
 # Add your pseudocode to this file below this line: #
 # ------------------------------------------------- #
 
+
+BEGIN
+   SET product_count = 2   // Start from 2, since each package contains 2 products
+   SET max_products = 50   // Maximum number of products in a case
+
+   PRINT "Counting product packages for boxing into cases:"
+
+   WHILE product_count <= max_products DO
+      PRINT product_count
+      INCREMENT product_count by 2
+   ENDWHILE
+
+   PRINT "The case is now full with 50 product packages."
+END
+
